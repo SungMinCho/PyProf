@@ -37,6 +37,7 @@ class Output():
         "mod": ["Module", "mod", str, 15],
         "op": ["Op", "op", str, 15],
         "kernel": ["Kernel", "name", str, 0],
+        "kernel_long": ["KernelLong", "lName", str, 0],
         "params": ["Params", "params", str, 0],
         "sil": ["Sil(ns)", "sil", int, 10],
         "tc": ["TC", "tc", str, 2],

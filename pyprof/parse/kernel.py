@@ -36,10 +36,14 @@ def getShortName(name):
     """
 	Returns a shorter kernel name
 	"""
+    # temporary fix
+    name = name.replace("void <unnamed>::", "")
+
     sname = name.split("<")[0] \
        .replace("void ", "") \
        .replace("at::","") \
        .replace("cuda::", "") \
+       .replace("at_cuda_detail::", "") \
        .replace("native::","") \
        .replace("(anonymous namespace)::", "")
     sname = sname.split("(")[0]

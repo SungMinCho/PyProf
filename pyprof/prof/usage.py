@@ -26,7 +26,7 @@ def parseArgs():
 
     def check_cols(value):
         valid = [
-            "idx", "seq", "altseq", "tid", "layer", "trace", "dir", "sub", "mod", "op", "kernel", "params", "sil", "tc",
+            "idx", "seq", "altseq", "tid", "layer", "trace", "dir", "sub", "mod", "op", "kernel", "kernel_long", "params", "sil", "tc",
             "device", "stream", "grid", "block", "flops", "bytes"
         ]
         cols = value.split(",")
@@ -51,7 +51,7 @@ def parseArgs():
     parser.add_argument("file", nargs='?', type=str, default=None, help="Output of parse.py (Python dictionary).")
 
     parser.add_argument(
-        "-c", type=check_cols, default="idx,dir,sub,mod,op,kernel,params,sil",
+        "-c", type=check_cols, default="idx,dir,sub,mod,op,kernel,kernel_long,params,sil",
         help='''Comma seperated names of columns to print.
 idx:      Index
 seq:      PyTorch Sequence Id
